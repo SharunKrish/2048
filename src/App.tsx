@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RefreshCw, Trophy, Settings, HelpCircle, Gamepad2 } from 'lucide-react';
+import { RefreshCw, Trophy, Settings, HelpCircle, Gamepad2, ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from 'lucide-react';
 
 // Types for the game state
 type TileData = {
@@ -311,7 +311,7 @@ export default function App() {
           </button>
 
           <div className="mt-4 text-white/50 text-[13px] leading-relaxed">
-            <b className="text-white">HOW TO PLAY:</b> Use your <b className="text-white">arrow keys</b> to move the tiles. When two tiles with the same number touch, they <b className="text-white">merge into one!</b>
+            <b className="text-white">HOW TO PLAY:</b> Use your <b className="text-white">arrow keys</b>, swipe the board, or tap the <b className="text-white">virtual arrows</b> to move the tiles. When two tiles with the same number touch, they <b className="text-white">merge into one!</b>
           </div>
         </aside>
 
@@ -405,6 +405,42 @@ export default function App() {
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+
+          <div className="mt-6 w-full sm:w-[460px] mx-auto">
+            <div className="grid grid-cols-3 gap-3 max-w-[240px] mx-auto">
+              <div />
+              <button
+                onClick={() => move('up')}
+                aria-label="Move up"
+                className="h-14 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ArrowUp size={24} />
+              </button>
+              <div />
+
+              <button
+                onClick={() => move('left')}
+                aria-label="Move left"
+                className="h-14 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ArrowLeft size={24} />
+              </button>
+              <button
+                onClick={() => move('down')}
+                aria-label="Move down"
+                className="h-14 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ArrowDown size={24} />
+              </button>
+              <button
+                onClick={() => move('right')}
+                aria-label="Move right"
+                className="h-14 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all active:scale-95"
+              >
+                <ArrowRight size={24} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
