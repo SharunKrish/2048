@@ -1,0 +1,6 @@
+{
+  "name": "2048 Neon",
+  "description": "A polished, neon-themed version of the classic 2048 sliding puzzle game with smooth animations and touch support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #1a1a2e;
+  background-image: 
+    radial-gradient(circle at 20% 20%, #4e54c8 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #8f94fb 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, #1a1a2e 0%, #16213e 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+}
